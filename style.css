@@ -93,6 +93,7 @@ h2 {
 }
 
 h3 {
+    text-align: center;
     font-size: 1.5rem;
     color: var(--head-text);
 }
@@ -201,7 +202,6 @@ h4 {
 .book2, .book1, .book3 {
 	position: relative;
     border-radius: 0.125rem;
-    /* align-self: center; */
 }
 
 .book2 { left  : calc(100vw / 1.2 - 220px - 5vw); }
@@ -223,7 +223,7 @@ height: auto;
 
 
 @media (max-width: 720px) {
-    h2 {
+    h3 {
         text-align: center;
     }
     section {
@@ -264,7 +264,7 @@ height: auto;
     h1 {
         font-size: 3rem;
     }
-    h2 {
+    h3 {
         font-size: 1.5rem;
     }
 }
