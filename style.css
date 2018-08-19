@@ -7,6 +7,9 @@
     --lighter-text: rgb(183, 183, 183);
     --button-color: rgb(255, 189, 114);
     --watermark-color: #E4E4E4;
+
+    --book-size-sm: 28.5vh;
+    --book-size-lg: 32.5vh;
 }
 
 /* BLOCKS */
@@ -98,7 +101,13 @@ h3 {
     color: var(--head-text);
 }
 
-h4 {
+h4{
+    font-size: 1.3rem;
+    color: var(--head-text);
+    font-weight: 500;
+}
+
+h5 {
     font-size: 1rem;
     color: var(--lighter-text);
 }
@@ -112,6 +121,32 @@ h4 {
     align-self: flex-start;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.2);
 }
+
+
+.hero-covers {
+    --book-size-sm: 28.5vh;
+    --book-size-lg: 32.5vh;
+    display: flex;
+	justify-content: center;
+    align-items: center;  
+    flex-direction: row;
+    align-content: center !important;
+    width: 600px;
+    height: 50vh;
+    margin: 1rem !important;
+}  
+
+.hero-book2,
+.hero-book3 { width: var(--book-size-sm); box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
+.hero-book1 { width: var(--book-size-lg); box-shadow: 0rem 1.0rem 2rem rgba(0, 0, 0, 0.25); }
+
+.hero-book1,
+.hero-book2,
+.hero-book3 { position: absolute; border-radius: 0.1rem; }
+
+.hero-book1 { z-index: 2; }
+.hero-book2 { left  : calc(100vw / 2 - var(--book-size-sm) - 6.25vw); }
+.hero-book3 { right : calc(100vw / 2 - var(--book-size-sm) - 6.25vw); }
 
 .avatar {
     object-fit: cover;
@@ -185,6 +220,7 @@ h4 {
 
 #names {
     width: 40%;
+    align-self: center;
 }
 
 #btn-block {
@@ -192,34 +228,6 @@ h4 {
     justify-content: space-evenly;
     width: 320px;
 }
-
-#covers{
-    /* align-items: center !important; */
-}
-
-/* Comment lines 202-217 and uncomment this to see the hiding effect */
-
-.book2, .book1, .book3 {
-	position: relative;
-    border-radius: 0.125rem;
-}
-
-.book2 { left  : calc(100vw / 1.2 - 220px - 5vw); }
-.book3 { right : calc(100vw / 1.2 - 220px - 5vw); }
-
-.book1 {
-	z-index: 2;
-}
-
-.book2,
-.book3 { 
-    width: 100%;
-height: auto;
-    
-    width: 220px; 
-    
-    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
-.book1 { width: 240px; box-shadow: 0rem 1.0rem 2rem rgba(0, 0, 0, 0.25); }
 
 
 @media (max-width: 720px) {
