@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,900');
 :root {
+/* TEXT    */
     font-family: 'Roboto', serif;
     --title-text-color: rgb(65, 65, 65);
     --head-text: rgba(7, 6, 6, 0.781);
     --article-text: rgb(20, 20, 20);
     --lighter-text: rgb(183, 183, 183);
-    --button-color: rgb(255, 189, 114);
-    --watermark-color: #E4E4E4;
-
+/* BUTTONS */
+    --button-color-main:  rgb(86, 169, 188);
+    --button-color-book1: rgb(255, 158, 165);
+    --button-color-book2: rgb(255, 189, 114);
+    --button-color-book3: rgb(92, 130, 140);
+/* IMAGES  */
     --book-size-sm: 28.5vh;
     --book-size-lg: 32.5vh;
+/* OTHER   */
+    --watermark-color: #E4E4E4;
 }
 
 /* BLOCKS */
@@ -36,6 +42,11 @@ section {
     justify-content: space-evenly;
 }
 
+.hero-covers {
+    height: 350px;
+    align-items: center;  
+}  
+
 .spaces * {
     margin: 5% 3%;
 }
@@ -46,6 +57,10 @@ section {
 
 .no-spaces * {
     margin: 5% 0;
+}
+
+.center-items{
+ /*  */
 }
 
 /* TEXT */
@@ -59,7 +74,7 @@ section {
 }
 
 .medium-text {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .thin-text {
@@ -104,12 +119,13 @@ h3 {
 h4{
     font-size: 1.3rem;
     color: var(--head-text);
-    font-weight: 500;
+    letter-spacing: 0.05rem;
 }
 
 h5 {
     font-size: 1rem;
     color: var(--lighter-text);
+    letter-spacing: 0.14rem;
 }
 
 /* IMAGES */
@@ -122,31 +138,30 @@ h5 {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-
-.hero-covers {
-    --book-size-sm: 28.5vh;
-    --book-size-lg: 32.5vh;
-    display: flex;
-	justify-content: center;
-    align-items: center;  
-    flex-direction: row;
-    align-content: center !important;
-    width: 600px;
-    height: 50vh;
-    margin: 1rem !important;
-}  
-
 .hero-book2,
-.hero-book3 { width: var(--book-size-sm); box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
-.hero-book1 { width: var(--book-size-lg); box-shadow: 0rem 1.0rem 2rem rgba(0, 0, 0, 0.25); }
+.hero-book3 { 
+    width: var(--book-size-sm); 
+    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
+.hero-book1 { 
+    width: var(--book-size-lg); 
+    box-shadow: 0rem 1.0rem 2rem rgba(0, 0, 0, 0.25); }
 
 .hero-book1,
 .hero-book2,
-.hero-book3 { position: absolute; border-radius: 0.1rem; }
+.hero-book3 { 
+    position: absolute; 
+    -radius: 0.1rem; }
 
-.hero-book1 { z-index: 2; }
-.hero-book2 { left  : calc(100vw / 2 - var(--book-size-sm) - 6.25vw); }
-.hero-book3 { right : calc(100vw / 2 - var(--book-size-sm) - 6.25vw); }
+.hero-book1 { 
+    z-index: 2; 
+}
+
+.hero-book2 { 
+    left  : calc(100vw / 2 - var(--book-size-sm) - 6.25vw); 
+}
+.hero-book3 { 
+    right : calc(100vw / 2 - var(--book-size-sm) - 6.25vw); 
+}
 
 .avatar {
     object-fit: cover;
@@ -180,7 +195,7 @@ h5 {
     border: none;
     border-radius: 1px;
     background-color: white;
-    color: var(--button-color);
+    color: var(--button-color-main);
 }
 
 .btn-read {
@@ -190,20 +205,35 @@ h5 {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.125);
     border: none;
     border-radius: 1px;
-    background-color: var(--button-color);
+    color: white;
+}
+
+
+.color-book1 {
+    background-color: var(--button-color-book1);
+}
+
+.color-book2 {
+    background-color: var(--button-color-book2);
+}
+
+.color-book3 {
+    background-color: var(--button-color-book3);
+}
+
+.btn-hero:hover{
+    background: var(--button-color-main);
     color: white;
 }
 
 .btn-hero:hover,
 .btn-read:hover,
 .btn-submit:hover {
-    background: var(--button-color);
-    color: white;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0 7px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-submit{
-    background-color: var(--button-color);
+    background-color: var(--button-color-main);
     width: auto;
     border: none;
     padding: 5px 10px;
@@ -228,7 +258,6 @@ h5 {
     justify-content: space-evenly;
     width: 320px;
 }
-
 
 @media (max-width: 720px) {
     h3 {
