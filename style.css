@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,900');
 :root {
     font-family: 'Roboto', serif;
-    --head-text: color: rgba(7, 6, 6, 0.781);
-    --article-text: rgb(20, 20, 20);
     --title-text-color: rgb(65, 65, 65);
-    --button-color: #FFA944;
+    --head-text: rgba(7, 6, 6, 0.781);
+    --article-text: rgb(20, 20, 20);
+    --lighter-text: rgb(183, 183, 183);
+    --button-color: rgb(255, 189, 114);
+    --watermark-color: #E4E4E4;
 }
 
 /* BLOCKS */
@@ -51,7 +53,10 @@ section {
 
 .bold-text {
     font-weight: 900;
-    color: var(--head-text);
+}
+
+.medium-text {
+    font-weight: 300;
 }
 
 .thin-text {
@@ -60,14 +65,13 @@ section {
 }
 
 .title-text {
-    font-size: 4.5rem;
     letter-spacing: 1.5rem;
     margin: 0 -1.5rem 0 0;
     color: var(--title-text-color);
 }
 
 .subtitle-text{
-    font-size: 1.85rem;;
+    font-weight: 200;
     letter-spacing: 0.55rem;
     margin: 0 -.55rem 0 0;
     color: var(--title-text-color);
@@ -81,19 +85,21 @@ section {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.85rem;
 }
 
 h3 {
     font-size: 1.5rem;
+    color: var(--head-text);
 }
 
 h4 {
     font-size: 1rem;
+    color: var(--lighter-text);
 }
 
 /* IMAGES */
@@ -111,7 +117,7 @@ h4 {
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    border: 4px solid #E4E4E4;
+    border: 4px solid var(--watermark-color);
 }
 
 .contact-logo {
@@ -186,24 +192,34 @@ h4 {
     width: 320px;
 }
 
-/* 
-    Comment lines 136-151 and uncomment this to see the hiding effect */
+#covers{
+    /* align-items: center !important; */
+}
 
-.a, .b, .c {
+/* Comment lines 202-217 and uncomment this to see the hiding effect */
+
+.book2, .book1, .book3 {
 	position: relative;
-	border-radius: 0.125rem;
+    border-radius: 0.125rem;
+    /* align-self: center; */
 }
 
-.a { left  : calc(100vw / 1.2 - 220px - 5vw); }
-.c { right : calc(100vw / 1.2 - 220px - 5vw); }
+.book2 { left  : calc(100vw / 1.2 - 220px - 5vw); }
+.book3 { right : calc(100vw / 1.2 - 220px - 5vw); }
 
-.b {
-	z-index: 10;
+.book1 {
+	z-index: 2;
 }
 
-.a,
-.c { width: 220px; box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
-.b { width: 240px; box-shadow: 0rem 1.0rem 2rem rgba(0, 0, 0, 0.25); }
+.book2,
+.book3 { 
+    width: 100%;
+height: auto;
+    
+    width: 220px; 
+    
+    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
+.book1 { width: 240px; box-shadow: 0rem 1.0rem 2rem rgba(0, 0, 0, 0.25); }
 
 
 @media (max-width: 720px) {
