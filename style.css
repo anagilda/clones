@@ -51,11 +51,11 @@ section {
 }
 
 .overlapping-block {
-    /* width: 600px; */
-    display: flex;
+    width: 600px;
+    /* display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-content: flex-start;
+    align-content: flex-start; */
 
 }
 
