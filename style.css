@@ -12,8 +12,8 @@
     --button-color-book2: rgb(255, 189, 114);
     --button-color-book3: rgb(92, 130, 140);
 /* IMAGES  */
-    --book-size-sm: 28.5vh;
-    --book-size-lg: 32.5vh;
+    --book-size-sm: 200px;
+    --book-size-lg: 220px;
     --logos-number: 4;
 /* OTHER   */
     --watermark-color: #E4E4E4;
@@ -62,14 +62,13 @@ section {
 
 
 .hero-covers {
+    width: 100%;
     height: 350px;
-    max-height: 55vh;
-    min-height: 200px;
     align-items: center;  
 }  
 
 .spaces * {
-    margin: 5% 3%;
+    margin: 20px 10px;
 }
 
 .no-spaces {
@@ -77,7 +76,7 @@ section {
 }
 
 .no-spaces * {
-    margin: 5% 0;
+    margin: 20px 0;
 }
 
 /* TEXT */
@@ -100,15 +99,15 @@ section {
 }
 
 .title-text {
-    letter-spacing: 1.5rem;
-    margin: 0 -1.5rem 0 0;
+    /* letter-spacing: 1.5rem;
+    margin: 0 -1.5rem 0 0; */
     color: var(--title-text-color);
 }
 
 .subtitle-text{
     font-weight: 200;
-    letter-spacing: 0.55rem;
-    margin: 0 -.55rem 0 0;
+    /* letter-spacing: 0.55rem;
+    margin: 0 -.55rem 0 0; */
     color: var(--title-text-color);
 }
 
@@ -304,12 +303,24 @@ form{
 
 
 @media (max-width: 720px) {
-    h3 {
+    h1{
+        width: 100%;
+        font-size: 3rem;
+        text-align: center;
+    } 
+    h2 {
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    h3{
+        width: 100%;
+        font-size: 1.5rem;
         text-align: center;
     }
     section {
         height: 100%;
-        margin-bottom: 10%;
+        margin-bottom: 50px;
     }
     .vertical-block {
         flex-direction: column;
@@ -317,13 +328,16 @@ form{
         width: 90%;
     }
     .horizontal-block {
-        margin: 3%;
+        margin: 10px;
         width: 100%;
     }
     .cover {
         width: 200px;
         justify-self: center;
         align-self: center;
+    }
+    #title{
+        width: 100%;
     }
     #names {
         width: 50%;
@@ -336,9 +350,24 @@ form{
         display: flex;
         flex-direction: row;
     }
+    
+    .hero-book2,
+    .hero-book3{
+        width: 180px;
+    }
+    .hero-book1{
+        width: 200px;
+    }
+
+    .hero-book2 { 
+        left  : calc(80px); 
+    }
+    .hero-book3 { 
+        right : calc(80px); 
+    }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
     #names {
         width: 90%;
     }
@@ -347,5 +376,8 @@ form{
     }
     h3 {
         font-size: 1.5rem;
+    }
+    .article-text{
+        width: 95%;
     }
 }
