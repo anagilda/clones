@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,900|Basic');
 :root {
 /* TEXT    */
     font-family: 'Roboto', serif;
@@ -14,6 +14,7 @@
 /* IMAGES  */
     --book-size-sm: 28.5vh;
     --book-size-lg: 32.5vh;
+    --logos-number: 4;
 /* OTHER   */
     --watermark-color: #E4E4E4;
 }
@@ -36,10 +37,39 @@ section {
 }
 
 .horizontal-block {
-    width: 700px;
+    width: 600px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.horizontal-grid{
+    display: grid;
+    grid-template-columns: 1fr repeat( var(--logos-number), calc(250px / var(--logos-number)))  1fr;
+    justify-content: center;
+    justify-items: center;
+}
+
+.overlapping-block {
+    /* width: 600px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+}
+
+.behind-block{
+    position: relative;
+    z-index: -1;
+    top: 140px;
+    display: inline-block;
+}
+.front-block{
+    display: inline-block;
+    align-content: center;
+    position: relative;
+    z-index: 5;
 }
 
 .hero-covers {
@@ -57,10 +87,6 @@ section {
 
 .no-spaces * {
     margin: 5% 0;
-}
-
-.center-items{
- /*  */
 }
 
 /* TEXT */
@@ -100,6 +126,13 @@ section {
     color: var(--article-text);
     line-height: 1.5;
     text-align: justify;
+}
+
+.watermark-text {
+    font-family: 'Basic', sans-serif;
+    font-size: 10rem;
+    text-align: left;
+    color: var(--watermark-color);
 }
 
 h1 {
@@ -177,6 +210,10 @@ h5 {
 }
 
 /* INPUT */
+form{
+    text-align: center;
+}
+
 .input-text{
     padding: 5px;
     border: none;
@@ -258,6 +295,20 @@ h5 {
     justify-content: space-evenly;
     width: 320px;
 }
+
+#facebook{
+    grid-column: 2;
+}
+#twitter {
+    grid-column: 3;
+}
+#instagram{
+    grid-column: 4;
+}
+#goodreads{
+    grid-column: 5;
+}
+
 
 @media (max-width: 720px) {
     h3 {
