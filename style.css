@@ -60,7 +60,6 @@ section {
     background-size: 10%;
 }
 
-
 .hero-covers {
     width: 100%;
     height: 350px;
@@ -289,7 +288,7 @@ form{
 #btn-block {
     display: flex;
     justify-content: space-evenly;
-    width: 320px;
+    width: 400px;
 }
 
 #facebook{
@@ -320,6 +319,42 @@ form{
     }
     #first-section{
         height: 100vh;
+    }
+}
+
+@media (min-height: 750px) and (min-width: 1152px){
+    h1{
+        font-size: 6.5rem;
+    }
+    h2{
+        font-size: 2.7rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        /* width: 2000px; */
+    }
+    .article-text{
+        font-size: 1.2rem;
+    }
+    .cover {
+        width: 250px;
+    }
+    .hero-book1 {
+        height: 45%;
+        width: auto
+    }
+    .hero-book2,
+    .hero-book3 {
+        height: 42%;
+        width: auto
+    }
+    
+    .hero-book2 { 
+        left  : calc(100vw / 2 - var(--book-size-sm) - 10.25vw); 
+    }
+    .hero-book3 { 
+        right : calc(100vw / 2 - var(--book-size-sm) - 10.25vw); 
     }
 }
 
@@ -406,40 +441,20 @@ form{
     label {
         font-size: 0.9rem;
     }
-
+           
     #btn-block {
-        align-items: center;
-        justify-content: center;
         width: 100%;
-        flex-direction: column;
     }
-    
-    a {
-        margin: 0px !important;
+    #btn-block a{
+        width: 40%;
+    }
+        
+    .btn-hero{
+        width: 100%;
     }
 
-.btn-submit{
-    margin-top: 0;
-    width: 175px;
+    .btn-submit{
+        margin-top: 0;
+        width: 175px;
+    }
 }
-
-}
-
-/* What is the minimum size we shoulld optimize for? */
-/* @media (max-width: 250px){}*/
-/* 
-- author name and ocupation container div bigger 
-- image size
-- form size
-*/
-
-
-/* #btn-block {
-    align-self: center;
-    justify-content: space-evenly;
-    width: 90%;
-}
-.btn-submit{
-margin-top: 0;
-width: 175px;
-} */
