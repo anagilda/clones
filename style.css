@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,350,400,500,900|Basic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,350,400,500,700,900|Basic');
 :root {
 /* TEXT    */
     font-family: 'Roboto', serif;
@@ -7,10 +7,8 @@
     --article-text: rgb(20, 20, 20);
     --lighter-text: rgb(183, 183, 183);
 /* BUTTONS */
-    --button-color-main:  rgb(86, 169, 188);
-    --button-color-book1: rgb(255, 158, 165);
-    --button-color-book2: rgb(255, 189, 114);
-    --button-color-book3: rgb(92, 130, 140);
+    --button-color-main:  rgba(218, 154, 58, 0.945);
+    --button-color-book:  rgba(86, 169, 188, 0.952);
 /* IMAGES  */
     --book-size-sm: 200px;
     --book-size-lg: 220px;
@@ -31,9 +29,9 @@ section {
 }
 
 .vertical-block {
+    width: 600px;
     display: flex;
     flex-direction: row;
-    width: 600px;
     justify-content: center;
 }
 
@@ -210,69 +208,57 @@ form{
     text-align: center;
 }
 
-.input-text{
+.submit-form{
+    background: rgba(122, 121, 121, 0.26);
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.input-field{
+    height: 30px;
+    display: inline-block;
+    width: 300px;
     padding: 5px;
-    border: none;
-    border-bottom: 1px solid #c0c0c0;
-    border-radius: 2px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
 }
 
 /* BUTTONS*/
-.btn-hero {
+
+.btn{
     width: 150px;
     height: 35px;
     border: none;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.125);
-    border: none;
-    border-radius: 1px;
-    background-color: white;
-    color: var(--button-color-main);
-    margin: 5% 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+}
+
+.btn-hero {
+    background-color: var(--button-color-main);
+    color: white;
+    font-weight: 700;
 }
 
 .btn-read {
-    width: 150px;
-    height: 35px;
-    border: none;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.125);
-    border: none;
-    border-radius: 1px;
+    background-color: var(--button-color-book); 
     color: white;
 }
 
-.color-book1 {
-    background-color: var(--button-color-book1);
-}
-
-.color-book2 {
-    background-color: var(--button-color-book2);
-}
-
-.color-book3 {
-    background-color: var(--button-color-book3);
-}
-
-.btn-hero:hover{
-    background: var(--button-color-main);
+.btn-send{
     color: white;
+    width: 60px;
+    height: 30px;
+    background-color: rgba(0, 110, 255, 0.575);
+    display: inline-block;
 }
 
-.btn-hero:hover,
-.btn-read:hover,
-.btn-submit:hover {
+.btn:hover {
+    opacity: 0.7;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0 7px 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn-submit{
-    background-color: var(--button-color-main);
-    width: auto;
-    border: none;
-    padding: 5px 10px;
-    color: white;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 1px;
-}
 
 /* SPECIAL STYLES */
 
@@ -391,6 +377,12 @@ form{
     .cover {
         justify-self: center;
         align-self: center;
+    }
+    .input-field{
+        width: 100%;
+    }
+    .btn-send{
+        margin-top: 0;
     }
     #title{
         width: 100%;
